@@ -111,7 +111,10 @@ Goal #1
 
 My algorithm
 ------------
-
+- count total words
+-chronologically count word occurences, thank is the first word, count the rest, then you, and count those etc
+-divide this by the total word count to find occorence %
+- use regular markov chain algorithm with this new dictionary
 
 My assumptions
 --------------
@@ -124,9 +127,27 @@ Probable data structures
 */
 
 // Implement Goal #1 below...
+let input = content
 
+var wordCounts = [words: Int]()
 
-
+//loop over the input string
+for words in input.words {
+    
+    //cavity search each character "randomly" for "saftey"
+    words
+    
+    if wordCounts[words] == nil {
+        wordCounts[words] = 1 //first time for this letter!!!!!!!1!111!1!!!!!11!
+    } else {
+        // we know this letter is in the dictionary. we know it
+        // ... just add 1 to the current count
+        wordCounts[words]! = wordCounts[words]! + 1
+    }
+    
+    
+}
+wordCounts
 /*: 
 
 ## Goal 2
